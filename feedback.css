@@ -1,0 +1,22 @@
+/* ===========================================================
+   Bellure Clinic — About page feedback form (individual task)
+   Loaded after forms.css, only on about.html.
+   =========================================================== */
+
+/* Radio group: errors are shown under the whole group, not one radio. */
+.rating-options{ display:flex; flex-wrap:wrap; gap:.25rem 1.25rem; }
+.rating-options .form-check{ margin:0; }
+.group-feedback{ display:none; }
+.group-feedback.d-block{ display:block; }
+
+/* A checkbox error sits under the label, inside .form-check. */
+.form-check .form-check-input.is-invalid ~ .invalid-feedback{ display:block; }
+.form-check-input.is-invalid{ border-color:var(--bs-form-invalid-border-color); border-width:2px; }
+.form-check-input.is-invalid ~ .form-check-label{ color:var(--bs-form-invalid-color); }
+.form-check-input.is-valid ~ .form-check-label{ color:var(--ink); }
+
+/* Date input keeps the same height as the other controls. */
+input[type="date"].form-control{ min-height:2.75rem; }
+
+/* About page sections now sit inside Bootstrap: keep the demo note readable. */
+.demo-note{ font-size:.9rem; }
